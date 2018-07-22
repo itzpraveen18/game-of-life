@@ -5,6 +5,7 @@ node {
     
     stage('Build ') {
         sh 'mvn install'
+		input message:'doing the Build pipe line '
     }
     stage('Archiving the Artifacts') {
         archiveArtifacts 'gameoflife-web/target/gameoflife.war'
